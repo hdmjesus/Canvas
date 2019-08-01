@@ -1,0 +1,58 @@
+La primera vez que comence con este proyecto data de hace mas de 1 año a mitad del 2018. Estaba iniando el curso de programacion
+basica de platzi. Uno de los primeros tropiezos cuando el docente mando el reto de dibujar en canvas con el mouse sin tener 
+conocimientos previos en la programacion fue que el navegador no me reconocia cuando pasaba el mouse sobre el canvas, console.log().
+
+Luego de tanta frustracion busque en internet tutoriales de como hacerlo, que por cierto no habia tantos para entonces. Logre con mi
+codigo que tenia y el de un programador mas de youtube hacer que dibujara por fin en mi fabuloso canvas, pero habia un problema, 
+solo dibujaba en la parte inferior del canvas solo cuando el mouse estaba en la mitad del canvas. 
+
+mi codigo era este:
+
+function dameTinta(tinta)
+{
+    mousePresionado=true;
+    console.log(tinta.clientX);
+
+}
+
+function moverMouse(evento)
+{
+    var color = colorsito;
+    var x = evento.clientX
+    var y = evento.clientY
+   
+    if (mousePresionado)
+     {
+         lienzo.fillStyle = color;
+    	   lienzo.fillRect(x,y,tamano, tamano);
+    }
+    
+function noMeDesTinta()
+{
+    mousePresionado = false
+}
+}
+
+Despues de intentar e intentar no logre resolver ese fallo, luego de eso desiste y me puse aprender otras cosas de la web como el
+el diseño web con CSS y he aprendido bastante de ello. Pero no es hasta la fecha de hoy que me decidi de nuevo a intentarlo de 
+poder dibujar en canvas con el mouse.
+
+Cuando inicio llego al mismo punto que me hizo abandonar la ultima vez, me frustre pero me calme y pense. Me preguntaba por que 
+estaba sucediendo lo mismo, busque un codigo que si funcionaba y lo comparaba y veia pero si todo se ve igual que ocurre.
+
+Para no hacer muy largo el asunto , todo se resolvia con una correcion de las variables (x ,y) que fue la siguiente:
+
+    var x = evento.clientX -10;
+    var y = evento.clientY-235;
+    
+    Lo que estaba sucediendo es que estaba dibujando 235 pixeles mas abajo del cursor, por eso en mi canvas de 300x300 cuando 
+    colocaba el puntero en el centro  solo dibujaba en la parte inferior de mi canvas. 
+    
+    UFF que alivio, me saque la espinita que hacia ya desde hace 1 año.
+    
+    A todas estas lo que queda como aprendizaje es que cuando algo falla no debemos desesperarnos e intentar e intertar sin 
+    pararnos y pensar claramente las cosas.
+    
+    Ya lo sabes , parate a pensar claramente que esta saliendo mal ....
+    
+
